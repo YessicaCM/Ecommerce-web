@@ -1,4 +1,4 @@
-Versión adaptada a HTML5 + CSS3 + Tailwind CSS (CDN)
+
 
 Archivos principales:
 - index.html
