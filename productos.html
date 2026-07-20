@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechGear | Productos</title>
+  <meta name="description" content="Explora nuestro catálogo completo de videojuegos. Filtra por categoría y encuentra tu próximo juego favorito.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="text-white antialiased">
+  <div id="site-header"></div>
+
+  <main class="min-h-screen bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="mb-8">
+        <h1 class="text-4xl font-bold mb-4">Productos</h1>
+        <p class="text-slate-400">Descubre nuestra colección completa de juegos.</p>
+        <div id="activeSearch" class="mt-4"></div>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8">
+        <aside class="w-full md:w-64 shrink-0">
+          <div class="glass-card rounded-2xl p-6 sticky top-24">
+            <h2 class="text-white font-bold text-lg mb-4">Categorías</h2>
+            <div id="categoryFilters" class="space-y-2"></div>
+          </div>
+        </aside>
+
+        <section class="flex-1">
+          <div class="mb-6 flex items-center justify-between">
+            <p id="productsCount" class="text-slate-400"></p>
+          </div>
+          <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="dist/app.bundle.js"></script>
+</body>
+</html>

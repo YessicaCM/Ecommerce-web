@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="description" content="Inicia sesión en tu cuenta TechGear para acceder a tus pedidos y carrito de compras.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+  <!-- Header -->
+<div id="site-header"></div>
+  <main class="min-h-screen flex items-center justify-center px-4">
+
+    <div class="w-full max-w-md bg-gradient-to-br from-blue-900/40 to-black border border-blue-500/30 rounded-xl p-6">
+
+      <h2 class="text-2xl font-bold text-center mb-2 text-cyan-400">Logitech G</h2>
+      <h3 class="text-xl font-semibold text-center mb-1">Iniciar Sesión</h3>
+      <p class="text-center text-slate-400 mb-6">Accede a tu cuenta Logitech</p>
+
+      <form id="loginForm" class="space-y-4">
+
+        <div>
+          <label class="text-sm">Usuario</label>
+          <input type="text" id="user" placeholder="tu usuario"
+            class="w-full bg-black border border-slate-700 rounded px-3 py-2 mt-1">
+        </div>
+
+        <div>
+          <label class="text-sm">Contraseña</label>
+          <input type="password" id="pass" placeholder="••••••"
+            class="w-full bg-black border border-slate-700 rounded px-3 py-2 mt-1">
+        </div>
+
+      
+
+        <button type="submit"
+          class="w-full bg-gradient-to-r from-blue-500 to-cyan-400 py-2 rounded font-semibold">
+          Iniciar Sesión
+        </button>
+
+      </form>
+
+      <p class="text-center text-sm mt-4">
+        ¿No tienes cuenta?
+        <a href="registro.html" class="text-blue-400">Regístrate</a>
+      </p>
+
+    </div>
+
+  </main>
+
+<div id="site-footer"></div>
+<script src="dist/app.bundle.js"></script>
+<script src="dist/login.bundle.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechGear | Carrito</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="text-white antialiased">
+  <div id="site-header"></div>
+
+  <main class="min-h-screen bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <h1 class="text-4xl font-bold mb-8">Carrito de compras</h1>
+
+      <div id="cartEmpty" class="hidden empty-state flex items-center justify-center text-center py-20 px-4">
+        <div>
+          <div class="text-7xl mb-6">🛍</div>
+          <h2 class="text-3xl font-bold mb-4">Tu carrito está vacío</h2>
+          <p class="text-slate-400 mb-8">Agrega algunos productos para comenzar.</p>
+          <a href="productos.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition">Ver productos</a>
+        </div>
+      </div>
+
+      <div id="cartContent" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div id="cartItems" class="lg:col-span-2 space-y-4"></div>
+        <aside class="lg:col-span-1">
+          <div class="glass-card rounded-2xl p-6 sticky top-24">
+            <h2 class="text-white font-bold text-xl mb-6">Resumen del pedido</h2>
+            <div class="space-y-3 mb-6">
+              <div class="flex justify-between text-slate-400"><span>Subtotal</span><span id="cartSubtotal" class="text-white font-semibold">$0.00</span></div>
+              <div class="flex justify-between text-slate-400"><span>Envío</span><span class="text-green-400 font-semibold">Gratis</span></div>
+              <div class="border-t border-white/10 pt-3 flex justify-between"><span class="text-white font-bold text-lg">Total</span><span id="cartTotal" class="text-white font-bold text-2xl">$0.00</span></div>
+            </div>
+            <a href="checkout.html" class="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-semibold transition mb-3">Proceder al pago</a>
+            <a href="productos.html" class="block w-full text-center text-blue-400 hover:text-blue-300 py-2 transition">Continuar comprando</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+<script src="dist/app.bundle.js"></script>
+</body>
+</html>

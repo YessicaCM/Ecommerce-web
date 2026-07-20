@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <meta name="description" content="Crea tu cuenta en TechGear y empieza a comprar los mejores videojuegos.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+<div id="site-header"></div>
+  <main class="min-h-screen flex items-center justify-center px-4">
+
+    <div class="w-full max-w-md bg-gradient-to-br from-blue-900/40 to-black border border-blue-500/30 rounded-xl p-6">
+
+      <h2 class="text-2xl font-bold text-center mb-2 text-cyan-400">Logitech G</h2>
+      <h3 class="text-xl font-semibold text-center mb-1">Crear Cuenta</h3>
+      <p class="text-center text-slate-400 mb-6">Únete a la comunidad Logitech</p>
+
+      <form action="api/registro.php" method="POST" class="space-y-4">
+
+        <div>
+          <label class="text-sm">Nombre Completo</label>
+          <input type="text" name="nombre_completo" placeholder="Juan Perez" required
+            class="w-full bg-black border border-slate-700 rounded px-3 py-2 mt-1">
+        </div>
+
+        <div>
+          <label class="text-sm">Usuario</label>
+          <input type="text" name="usuario" placeholder="tu usuario" required
+            class="w-full bg-black border border-slate-700 rounded px-3 py-2 mt-1">
+        </div>
+        
+        <div>
+          <label class="text-sm">Email</label>
+          <input type="email" name="email" required
+            class="w-full bg-black border border-slate-700 rounded px-3 py-2 mt-1">
+        </div>
+
+        <div>
+          <label class="text-sm">Contraseña</label>
+          <input type="password" name="password" required
+            class="w-full bg-black border border-slate-700 rounded px-3 py-2 mt-1">
+        </div>
+
+        <div>
+          <label class="text-sm">Confirmar contraseña</label>
+          <input type="password" required
+            class="w-full bg-black border border-slate-700 rounded px-3 py-2 mt-1">
+        </div>
+
+        <button type="submit"
+          class="w-full bg-gradient-to-r from-blue-500 to-cyan-400 py-2 rounded font-semibold">
+          Crear Cuenta
+        </button>
+
+      </form>
+
+      <p class="text-center text-sm mt-4">
+        ¿Ya tienes una cuenta?
+        <a href="login.html" class="text-blue-400">Inicia Sesión</a>
+      </p>
+
+    </div>
+
+  </main>
+
+<div id="site-footer"></div>
+<script src="dist/app.bundle.js"></script>
+</html>

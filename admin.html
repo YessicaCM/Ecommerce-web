@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white hidden" id="adminBody">
+
+<!-- Header -->
+<div id="site-header"></div>
+
+<main class="min-h-screen px-6 py-10">
+
+  <!-- Título -->
+  <h1 class="text-3xl font-bold text-cyan-400 mb-8 text-center">
+    Panel de Administración
+  </h1>
+
+  <!-- Formulario -->
+  <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-900/40 to-black border border-blue-500/30 rounded-xl p-6 mb-10">
+
+    <h2 class="text-xl font-semibold mb-4">Agregar / Editar Producto</h2>
+
+    <form id="productForm" class="grid md:grid-cols-4 gap-4">
+
+      <input type="text" id="nombre" placeholder="Nombre"
+        class="bg-black border border-slate-700 rounded px-3 py-2">
+
+      <input type="number" id="precio" placeholder="Precio"
+        class="bg-black border border-slate-700 rounded px-3 py-2">
+
+        <textarea id="descripcion" placeholder="Descripción"
+          class="bg-black border border-slate-700 rounded px-3 py-2 md:col-span-4"></textarea>
+
+      <input type="number" id="stock" placeholder="Stock"
+        class="bg-black border border-slate-700 rounded px-3 py-2">    
+
+      <input type="file" id="imagen" accept="image/*"
+        class="bg-black border border-slate-700 rounded px-3 py-2">
+        <img src="" id="previewImagen" width="100"/>
+      <select id="categoria"
+        class="bg-black border border-slate-700 rounded px-3 py-2 text-white">
+        <option value="">Seleccione una categoría</option>
+      </select>
+
+      <button type="submit"
+        class="bg-gradient-to-r from-blue-500 to-cyan-400 rounded font-semibold">
+        Guardar
+      </button>
+
+
+    </form>
+  </div>
+
+  <!-- Lista de productos -->
+  <div class="max-w-6xl mx-auto">
+
+    <h2 class="text-xl font-semibold mb-6">Productos</h2>
+
+    <div id="listaProductos" class="grid md:grid-cols-3 gap-6"></div>
+
+  </div>
+
+</main>
+
+<!-- Footer -->
+<div id="site-footer"></div>
+
+<script src="dist/app.bundle.js"></script>
+<script src="dist/admin.bundle.js"></script>
+<script src="js/admin.js"></script>
+
+
+<script>
+  renderShell();
+</script>
+
+<script>
+async function checkAdmin() {
+  try {
+    const resp = await fetch('api/check_admin.php', {
+      credentials: 'same-origin'
+    });
+
+    const data = await resp.json();
+    console.log("CHECK ADMIN:", data);
+
+    if (!data.ok) {
+      window.location.href = "login.html";
+    } else {
+      document.getElementById("adminBody").classList.remove("hidden");
+    }
+
+  } catch (error) {
+    console.error("Error en checkAdmin:", error);
+  }
+}
+
+// pequeño delay para asegurar sesión
+setTimeout(checkAdmin, 150);
+</script>
+
+
+
+</body>
+</html>
+

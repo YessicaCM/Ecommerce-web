@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechGear | Contacto</title>
+  <meta name="description" content="Contáctanos para cualquier duda o consulta sobre nuestros productos y servicios.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="text-white antialiased">
+  <div id="site-header"></div>
+
+  <main class="min-h-screen bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold mb-4">Contacto</h1>
+        <p class="text-slate-400 max-w-2xl mx-auto">¿Tienes alguna pregunta? Estamos aquí para ayudarte. Envíanos un mensaje y te responderemos lo antes posible.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="space-y-6">
+          <div class="glass-card rounded-2xl p-6"><div class="text-3xl mb-4">✉</div><h3 class="text-white font-semibold mb-2">Email</h3><p class="text-slate-400 text-sm">info@techgear.com</p><p class="text-slate-400 text-sm">soporte@techgear.com</p></div>
+          <div class="glass-card rounded-2xl p-6"><div class="text-3xl mb-4">☎</div><h3 class="text-white font-semibold mb-2">Teléfono</h3><p class="text-slate-400 text-sm">+12 31-456-7800</p><p class="text-slate-400 text-sm">+12 31-456-6009</p></div>
+          <div class="glass-card rounded-2xl p-6"><div class="text-3xl mb-4">📍</div><h3 class="text-white font-semibold mb-2">Ubicación</h3><p class="text-slate-400 text-sm">1234 Gaming Street<br>Tech City, TC 12345<br>Estados Unidos</p></div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <form id="contactForm" class="glass-card rounded-2xl p-6 sm:p-8">
+            <h2 class="text-2xl font-bold mb-6">Envíanos un mensaje</h2>
+            <div class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div><label class="block text-slate-300 mb-2">Nombre *</label>
+                  <input class="input-dark w-full rounded-lg px-4 py-3" id="nombre" type="text" required></div>
+                <div><label class="block text-slate-300 mb-2">Email *</label>
+                  <input class="input-dark w-full rounded-lg px-4 py-3" id="email" type="email" required></div>
+              </div>
+              <div><label class="block text-slate-300 mb-2">Asunto *</label>
+                <input class="input-dark w-full rounded-lg px-4 py-3" id="asunto" type="text" required></div>
+              <div><label class="block text-slate-300 mb-2">Mensaje *</label>
+                <textarea class="textarea-dark w-full rounded-lg px-4 py-3 resize-none" id="mensaje" rows="6" required></textarea></div>
+              <button class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition" type="submit">Enviar mensaje</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="dist/app.bundle.js"></script>
+</body>
+</html>
